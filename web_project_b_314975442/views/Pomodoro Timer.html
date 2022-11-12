@@ -1,0 +1,90 @@
+<!-- Pomodoro Technique Home Screen-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- favicon -->
+      <link rel="icon" href="../static/images/icon.png">
+
+      <!-- CSS Stylesheets -->
+      <link rel="stylesheet" href="../static/Pomodoro Technique.css">
+
+      <!-- JavaScript Stylesheets -->
+      <script defer src="../static/Pomodoro Technique.js"></script>
+
+      <!-- Bootstrap Scripts -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+
+      <title>Pomodoro Timer Technique Home Screen</title>
+  </head>
+  <style>
+      body{
+          background-color: #dc3545;
+      }
+
+      button {
+          background: none;
+          border: none;
+          outline: none;
+      }
+  </style>
+  <body onload="createTimer()">
+    <!-- navigation bar -->
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="HomeScreen.html">P.T. Timers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">What is Pomodoro Technique?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Sign in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Customize your timer</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+
+      <!-- headers div -->
+      <div class="top-container">
+        <h1>Pomodoro Technique Timers</h1>
+      </div>
+      
+      <!-- status bar to notice in which part the client is in -->
+      <div class="status-bar">
+        <ul class="multi-steps" id="multi-steps">
+          <button type="button" class="btn btn-outline-dark" id="work-step" style="padding: 2%;">Work</button>
+          <button type="button" class="btn btn-outline-dark" id="short-step" style="padding: 2%;">Short-break</button>
+          <button type="button" class="btn btn-outline-dark" id="long-step" style="padding: 2%;">Long-break</button>
+
+        </ul>
+      </div>
+
+      <!-- that div calls the timer functions from the timer.js file by id -->
+      <div id="myTimer" class="my-pomodoro-container"></div>
+      
+
+      <div class="timer-buttons-container">
+        <button src="../static/HomeScreen.js" onclick="startTimer()"><img src="../static/images/play-fill.svg" alt="play" width="50" height="50"/></button>
+        <button src="../static/HomeScreen.js" onclick="stopTimer()"><img src="../static/images/pause-fill.svg" alt="pause" width="50" height="50"/></button>
+        <button src="../static/HomeScreen.js" onclick="restartButton()"><img src="../static/images/replay-fill.svg" alt="replay" width="50" height="50" style="padding-top: 20%;"/></button>      
+      </div>
+
+  </body>
+</html>
